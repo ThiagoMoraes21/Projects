@@ -7,3 +7,27 @@
   background-color: darkcyan;
   color: #fff;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  margin: auto;
+  width: 60vh;
+  height: 50px;
+  background-color: lightgrey;
+  line-height: 50px;
+}
+
+#list li:hover {
+  background-color: coral;
+  color: #fff;
+}
+
+#list2 li:hover {
+  background-color: darkcyan;
+  color: #fff;
+}
