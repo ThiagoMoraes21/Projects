@@ -1,0 +1,272 @@
+body {
+  padding: 0;
+  margin: 0;
+  /*background: #232526;   fallback for old browsers
+  background: #a73737;
+  background: -webkit-linear-gradient(to right, #7a2828, #a73737);
+  background: linear-gradient(to right, #7a2828, #a73737);
+  */
+  background: #313131;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #232526;
+  --secondary-color: #434343;
+  --main-text-color: #fff;
+  --menu-color: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+
+a:link {
+  color: rgba(251, 251, 251, 0.9);
+}
+
+a:visited {
+  color: rgba(251, 251, 251, 0.9);
+}
+
+#page1 {
+  display: grid;
+  grid-template-rows: 99vh minmax(100vh, auto) 30vh;
+}
+
+#content {
+  grid-row: 2/3
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+#picHeader {
+  max-height: 100% ;
+  width: 100%;
+  text-align: center;
+  font-size: 6vw;
+  overflow: hidden;
+}
+
+#titleHeader {
+  position: relative;
+  top: 3%;
+  left: 1%;
+  z-index: 1;
+}
+
+#titleHeader h1 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  font-family: sans-serif;
+  color: var(--main-text-color);
+  transition: all 0.6s ease-in-out;
+}
+
+#t2 {
+  margin-top: -12%;
+  margin-left: 29%;
+}
+
+.hiddeTitle {
+  margin-top: -5%;
+  opacity: 0;
+}
+
+.showTitle {
+  opacity: 1;
+}
+
+#pictureContainer {
+  position: absolute;
+  top: -1%;
+  width: 66.7%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('Images/eleicoes2.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  transition: all 0.6s ease-in-out;
+}
+
+.zoom {
+  transform: scale(1.5);
+}
+
+.zooming {
+  transform: scale(1);
+  display: block;
+}
+
+#infoHeader {
+  /*background-color: #434343;*/
+  background-color: var(--main-color);
+  width: 100%;
+}
+
+#blackBg {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+  height: 0;
+}
+
+.showBlackBg {
+  opacity: 1!important;
+  transition: opacity 600ms ease-in-out !important;
+  height: 100%!important;
+  z-index: 100;
+}
+
+nav {
+  position: fixed;
+  top: 0vh;
+  left: -68vh;
+  height: 100vh;
+  width: 80vh;
+  transition: all 500ms ease-in-out;
+  background: var(--menu-color);
+  z-index: 1000;
+}
+
+#menuIcons {
+  position: fixed;
+  top: 2vh;
+  left: 0vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  width: 12vh;
+  text-align: center;
+  color: rgba(251, 251, 251, 0.9);
+}
+
+#search {
+  grid-row: 1/2;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 100px;
+}
+
+#bars {
+  grid-row: 2/3;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 150px;
+}
+
+.fa-arrow-down{
+  transform: rotate(0deg);
+  transition: transform 300ms linear;
+  grid-row: 3/4;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 120px;
+}
+
+.fa-arrow-down.open{
+  transform: rotate(180deg);
+  transition: transform 300ms linear;
+}
+
+
+.showMenu {
+  left: 0% !important;
+}
+
+#baner {
+  position: absolute;
+  top: 99.5vh;
+  left: 26vw;
+  width: 50%;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  color: var(--main-text-color);
+  font-size: 2vw;
+  font-family: sans-serif;
+  border-bottom: 1px solid #fff;
+}
+
+#baner h2 {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+/* CARDS CONTAINER */
+img {
+  display: block;
+  max-width: 100%;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+figure:hover img {
+  transform: scale(1.1);
+}
+
+figcaption {
+  position: absolute;
+  left: 0%;
+  bottom: 10px;
+  background-color: #cb2d3e;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 3vh;
+  grid-row-gap: 3vh;
+  width: 80%;
+  position: relative;
+  margin-top: 25vh;
+  margin-bottom: 30px;
+  left: 12%;
+}
+
+.card {
+  position: relative;
+}
+
+footer {
+  grid-row: 3/4;
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+}

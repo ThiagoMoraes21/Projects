@@ -1,0 +1,224 @@
+body, html {
+  margin: auto;
+  padding: 0;
+  background-color: #aaa;
+}
+
+#v_menu {
+  width: 300px;
+  height: 100%;
+  background-color: #606060;
+  z-index: -1000;
+}
+
+.hide_v_menu {
+  position: absolute;
+  left: -300px;
+  top: 0;
+  transition: left ease-in-out 400ms;
+}
+
+.call_v_menu {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  transition: left ease-in-out 400ms;
+}
+
+/* NAV */
+#nav {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+
+#nav ul {
+  width: 20px;
+  position: relative;
+  left: 0px;
+}
+
+#nav ul li {
+  text-decoration: none;
+  list-style: none;
+  width: 60px;
+  height: 10px;
+  border: 1px solid #333;
+  background-color: #333;
+  margin-bottom: 5px;
+  position: relative;
+  left: -40px;
+}
+
+#nav:hover .lin-1 {
+  width: 30px;
+}
+
+#nav:hover .lin-2 {
+  width: 45px;
+}
+
+#nav:hover .lin-3 {
+  width: 58px;
+}
+
+.lin-1 {
+  transition: width ease-in-out 400ms;
+  position: relative;
+  top: 0;
+}
+
+.lin-2 {
+  transition: width ease-in-out 400ms;
+  position: relative;
+  top: 0;
+}
+
+.lin-3 {
+  transition: width ease-in-out 400ms;
+  position: relative;
+  top: 0;
+}
+
+/* Close Animation */
+.animate1 {
+  transition: width ease-in-out 600ms;
+  animation: close1 ease-in-out 600ms forwards;
+}
+
+@keyframes close1 {
+  0% {
+    top: 0;
+    height: 10px;
+  }
+  60% {
+    top: 16px;
+    height: 8px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 16px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+.animate2 {
+  transition: width ease-in-out 600ms;
+  animation: close2 ease-in-out 600ms forwards;
+}
+
+@keyframes close2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate3 {
+  transition: width ease-in-out 600ms;
+  animation: close3 ease-in-out 600ms forwards;
+}
+
+@keyframes close3 {
+  0% {
+    top: 0;
+    height: 10px;
+  }
+  60% {
+    top: -16px;
+    height: 8px;
+    transform: rotate(0);
+  }
+  100% {
+    top: -16px;
+    height: 8px;
+    transform: rotate(-45deg);
+  }
+}
+
+/* Close Button Animation
+#nav:hover .animate1 {
+  animation: c_animation-1 ease-in-out 400ms forwards;
+}
+
+@keyframes c_animation-1 {
+  0% {
+    top: 16px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+  100% {
+    top: 16px;
+    height: 8px;
+    transform: rotate(-45deg);
+  }
+}
+
+#nav:hover .animate3 {
+  animation: c_animation-2 ease-in-out 400ms forwards;
+}
+
+@keyframes c_animation-2 {
+  0% {
+    top: -16px;
+    height: 8px;
+    transform: rotate(-45deg);
+  }
+  100% {
+    top: -16px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+}
+*/
+
+/* Close Button
+#close {
+  padding: 0;
+  margin: 20% 0 0 15%;
+  width: 40px;
+  height: 40px;
+
+}
+
+#close .vert {
+  position: relative;
+  top: 15px;
+  left: 2px;
+  width: 30px;
+  height: 2px;
+  border: 2px solid #222;
+  background-color: #222;
+  transform: rotate(50deg);
+  transition: ease-in-out transform 400ms;
+}
+
+#close .hor {
+  position: relative;
+  top: 15px;
+  left: 2px;
+  margin-top: -6px;
+  width: 30px;
+  height: 2px;
+  border: 2px solid #222;
+  background-color: #222;
+  transform: rotate(-50deg);
+  transition: ease-in-out transform 400ms;
+}
+
+#close:hover .vert{
+  transform: rotate(90deg);
+}
+
+#close:hover .hor{
+  transform: rotate(180deg);
+}
+*/

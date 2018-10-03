@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #003333;
+  height: 3000px;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: block;
+}
+
+ h1 {
+  font-size: 14rem;
+  position: absolute;
+  left: 25%;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 1000;
+  transition: all 300ms ease-in-out;
+  font-weight: 200;
+}
+
+.titleNone {
+  opacity: 0;
+  top: -15%;
+}
+
+.titleShow {
+  opacity: 1;
+  top: 8%;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  background-image: url('nature.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: all 0.5s ease-in-out;
+}
+
+.child {
+  transform: scale(1.4);
+}
+
+.zooming {
+  transform: scale(1)!important;
+}

@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#wrap {
+  height:100px;
+  width:100px;
+  border:20px solid red;
+  overflow:hidden;
+ }
+
+#wrap div {
+  top:30px;
+  left:48px;
+   width:150px;
+ }
+
+#wrap div#fix, #wrap div#abs {
+  margin-left:20px;
+}
+
+#wrap div#fix {
+  position:fixed;
+  background-color:rgba(255, 0, 0, 0.4);
+}
+
+#wrap div#rel {
+  position:relative;
+  background-color:rgba(0, 255, 0, 0.4);
+}
+
+#wrap div#abs {
+  position:absolute;
+  top:70px;
+  background-color:rgba(0, 0, 255, 0.4);
+}
+
+#scrollH {
+  height: 2000px;
+  width: 100%;
+  background: pink;
+}
